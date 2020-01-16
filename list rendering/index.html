@@ -1,0 +1,39 @@
+<! DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World</title>
+    </head>
+
+    <body>
+
+        <div id="root">
+            <h1>Skills</h1><hr>
+            <ul>
+                <li v-for = "skill in skills">
+                    {{skill.name}} ({{skill.experience}})
+                </li>
+            </ul>
+
+        </div>
+
+        <script type="text/javascript" src="vue.js"></script>
+
+        <script>
+            var app = new Vue({
+                el: "#root",
+                data: {
+                    skills:[
+                        {name:"html",experience:5},
+                        {name:"css",experience:3},
+                        {name:"python",experience:4},
+                        {name:"django",experience:6},
+                    ]
+                }
+            });
+        </script>
+    </body>
+
+<style>
+
+</style>
+</html>
