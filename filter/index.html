@@ -1,0 +1,40 @@
+
+    <head>
+        <title>Hello World</title>
+    </head>
+
+    <body>
+
+        <div id="root">
+            <h1>{{name|lower}}</h1>
+        </div>
+
+        <script type="text/javascript" src="vue.js"></script>
+
+        <script>
+            Vue.filter("lower", function (s) {
+                return s.toLowerCase();
+
+            })
+
+            var app = new Vue({
+                el: "#root",
+                data: {
+                    name : "diganta Biswas"
+                },
+
+                filters:{
+                    upper: function (s) {
+                        return s.toUpperCase()
+
+                    }
+                }
+
+
+            });
+        </script>
+    </body>
+
+<style>
+
+</style>
