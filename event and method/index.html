@@ -14,7 +14,7 @@
                     </p>
                 </li>
             </ul>
-            <input type="text" v-model="newSkill">
+            <input type="text" v-model="newSkill" @keyup.enter="addNewSkill">
             <button v-on:click="addNewSkill">Add</button>
         </div>
 
